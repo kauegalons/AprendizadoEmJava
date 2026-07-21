@@ -1,4 +1,4 @@
-package NivelIntermediario;
+package NivelIntermediario.Overload2;
 
 public interface EstrategiaDeBatalha {
 
