@@ -15,8 +15,8 @@ public class BolsaGenerica <T> {
         this.equipamentos = new ArrayList<>();
     }
 
-    //Colocar equipamentos Genericos
-    public void adcionarEquipamentos(T equipamentoGenerico) {
+    //Colocar equipamentos Genericos na nossa lista
+    public void adicionarEquipamentos(T equipamentoGenerico) {
         equipamentos.add(equipamentoGenerico);
     }
 
@@ -35,5 +35,11 @@ public class BolsaGenerica <T> {
     }
 
 
+    //Mostrar equipamentos
+    public void mostrarEquipamentos(){
+        for(T equipamento: equipamentos){
+            System.out.println(equipamento);
+        }
+    }
 
 }
