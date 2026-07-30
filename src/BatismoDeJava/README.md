@@ -221,8 +221,6 @@ Todos os exemplos usam personagens e conceitos do anime **Naruto** para tornar o
 
 ---
 
----
-
 ## ❓ Perguntas de Entrevista (Tópicos)
 
 - **Pergunta:** Qual a diferença entre um LinkedList e um ArrayList?
@@ -245,8 +243,6 @@ Todos os exemplos usam personagens e conceitos do anime **Naruto** para tornar o
 
 ---
 
-## ❓ Perguntas de Entrevista (Tópicos)
-
 - **Pergunta:** Por que LinkedList tem esse nome?
 
   **Resposta resumida:**
@@ -265,5 +261,7 @@ Todos os exemplos usam personagens e conceitos do anime **Naruto** para tornar o
   - O nome deixa claro o tipo de estrutura interna usada pela classe.
 
 ---
+
+**Bom aprendizado! 火の意志 (Will of Fire)** 🔥
 
 
