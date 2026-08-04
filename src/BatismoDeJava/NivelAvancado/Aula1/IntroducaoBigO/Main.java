@@ -15,7 +15,7 @@ public class Main {
 
         // Algoritmo - o(1) - Complexidade constante
         System.out.println("Exemplo de complexidade constante:");
-        System.out.println(ninjas.get(0)); // O(1) - acesso direto ao índice 0
+        System.out.println(ninjas.get(1)); // O(1) - acesso direto ao índice 0
         System.out.println("\n");
 
         //Algoritimo - o(n) - Complexidade linear

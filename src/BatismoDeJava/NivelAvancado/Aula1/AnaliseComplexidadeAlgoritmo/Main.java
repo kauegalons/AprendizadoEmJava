@@ -1,6 +1,5 @@
 package BatismoDeJava.NivelAvancado.Aula1.AnaliseComplexidadeAlgoritmo;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
