@@ -1,4 +1,4 @@
-package LeetCodeLoop;
+package Exercicios;
 
 public class FirstLastDigitSum {
     public static void main(String[] args) {

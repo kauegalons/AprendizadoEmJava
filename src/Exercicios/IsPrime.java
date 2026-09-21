@@ -1,4 +1,4 @@
-package LeetCodeLoop;
+package Exercicios;
 
 public class IsPrime {
     public static void main(String[] args) {
