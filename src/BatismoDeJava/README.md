@@ -172,6 +172,85 @@ Bem-vindo ao módulo **Batismo de Java**! Este é um roteiro estruturado para ap
 
 ---
 
+### 🗂️ **Aula 13 - Collections (Collections)**
+- **Objetivo**: Enxergar o framework de coleções como um conjunto coeso, não como classes isoladas
+- **Conceitos Explorados**:
+  - ✅ Diferença entre **classe** (`ArrayList`, `Stack`, `LinkedList`, `PriorityQueue`) e **interface** (`Queue`)
+  - ✅ Declarar pela interface e instanciar pela implementação: `Queue<String> fila = new LinkedList<>()`
+  - ✅ `PriorityQueue` com ordenação invertida via `Collections.reverseOrder()`
+  - ✅ Operações `offer` (inserir) e `poll` (remover respeitando a prioridade)
+- **Detalhe importante**: ao usar `reverseOrder()`, o `poll()` remove o **maior** elemento, não o primeiro inserido
+- **Arquivo Principal**: `Main.java` (em `Aula13/Collections`)
+
+---
+
+### 🧭 **Aula 14 - Desafio 6 (Desafio6)**
+- **Objetivo**: Aplicar `LinkedList` com objetos reais e ordenar por diferentes critérios
+- **Conceitos Explorados**:
+  - ✅ `LinkedList<Ninja>` armazenando objetos em vez de tipos primitivos
+  - ✅ Operações de extremidade: `addFirst()` e `removeFirst()`
+  - ✅ Busca por posição com `get(indice)` e `indexOf(objeto)`
+  - ✅ Ordenação com `sort()` recebendo **lambda** (Comparator)
+  - ✅ `compareTo()` para ordenar texto e `Integer.compare()` para ordenar números
+  - ✅ `toString()` sobrescrito para exibição legível
+- **Exemplo Prático**: a mesma lista de ninjas é ordenada duas vezes, primeiro por nome e depois por idade, apenas trocando a lambda
+- **Classes Principais**:
+  - `Ninja`: nome, idade e vila, com getters/setters e `toString()`
+  - `Main`: monta a lista e demonstra cada operação
+
+---
+
+### 🎴 **Aula 15 - HashSet (HashSet)**
+- **Objetivo**: Trabalhar com conjuntos, onde cada elemento é único
+- **Conceitos Explorados**:
+  - ✅ `HashSet` e a garantia de elementos únicos
+  - ✅ Tentativa de inserir duplicata é simplesmente ignorada, sem erro
+  - ✅ Verificação de pertencimento com `contains()`
+  - ✅ Remoção com `remove()`
+  - ✅ Conjunto **não** mantém ordem de inserção
+- **Exemplo Prático**: as aldeias participantes de um torneio, onde "Konoha" é adicionada duas vezes mas aparece uma só
+- **Arquivo Principal**: `Main.java` (em `Aula15/HashSet`)
+
+---
+
+### **Nível Avançado**
+
+#### ⏱️ **Aula 1 - Análise de Complexidade e Big O**
+- **Objetivo**: Entender o custo dos algoritmos e comprovar esse custo na prática
+- **Conceitos Explorados**:
+  - ✅ Notação Big O como forma de descrever crescimento, não tempo absoluto
+  - ✅ **O(1)** constante: acesso direto por índice
+  - ✅ **O(n)** linear: uma passagem por todos os elementos
+  - ✅ **O(n²)** quadrática: laço aninhado, cada elemento contra todos os outros
+  - ✅ Medição real de tempo com `System.nanoTime()`
+  - ✅ Comparação prática entre `ArrayList` e `LinkedList`
+- **Divisão da aula**:
+  - `IntroducaoBigO`: demonstra as três complexidades, primeiro com uma lista de ninjas e depois com array e tabuada de multiplicação
+  - `AnaliseComplexidadeAlgoritmo`: popula as duas estruturas com mais de **10 milhões** de elementos e cronometra `get`, `add` e `remove` em cada uma
+- **O que observar**: no `get(50)` o `ArrayList` vence com folga, porque acessa por índice em O(1), enquanto o `LinkedList` precisa percorrer os nós
+- **Classes Principais**:
+  - `Ninjas`: classe simples usada nos exemplos de complexidade
+
+---
+
+#### 🌊 **Aula 2 - Streams (Streams)**
+- **Objetivo**: Processar coleções de forma declarativa, descrevendo **o que** fazer em vez de **como** iterar
+- **Conceitos Explorados**:
+  - ✅ `stream()` para abrir o fluxo a partir de uma coleção
+  - ✅ `filter()` para selecionar elementos por condição
+  - ✅ `sorted()` para ordenar com Comparator
+  - ✅ `map()` para transformar cada elemento em outro valor
+  - ✅ `max()` para reduzir a coleção a um único resultado
+  - ✅ `forEach()` com **method reference** (`System.out::println`)
+  - ✅ `Optional` e o uso de `orElse(null)` para o caso de coleção vazia
+  - ✅ `String.CASE_INSENSITIVE_ORDER` como alternativa a comparar em maiúsculas
+- **Exemplo Prático**: encontrar o ninja mais velho da lista em uma única expressão, sem laço nem variável auxiliar
+- **Observação**: no arquivo, os exemplos de `filter`, `sorted` e `map` estão comentados para permitir executar um de cada vez; apenas o `max()` está ativo
+- **Classes Principais**:
+  - `Ninja`: nome, vila e idade, com getters e `toString()`
+
+---
+
 ## 💡 Conceitos-Chave Aprendidos
 
 | Conceito                      | Aula    | Descrição                                 |
@@ -192,6 +271,15 @@ Bem-vindo ao módulo **Batismo de Java**! Este é um roteiro estruturado para ap
 | **Stack (Pilha)**             | 10      | Estrutura LIFO, push/pop                  |
 | **Recapitulação (Estruturas)**| 11      | Revisão: listas, pilhas, filas e mapas    |
 | **Queue (Fila)**              | 12      | Estrutura FIFO, offer/poll/peek           |
+| **Collections**               | 13      | Classes e interfaces do framework         |
+| **PriorityQueue**             | 13      | Fila por prioridade, ordem reversa        |
+| **LinkedList com objetos**    | 14      | addFirst/removeFirst, busca por índice    |
+| **Comparator com lambda**     | 14      | Ordenar por critérios diferentes          |
+| **HashSet (Conjunto)**        | 15      | Elementos únicos, duplicata ignorada      |
+| **Notação Big O**             | Av. 1   | O(1), O(n) e O(n²)                        |
+| **Medição com nanoTime**      | Av. 1   | Comprovar custo real das operações        |
+| **Streams**                   | Av. 2   | filter, sorted, map, max e forEach        |
+| **Optional**                  | Av. 2   | Resultado ausente sem retornar null cru   |
 
 ---
 
