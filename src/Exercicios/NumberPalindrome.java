@@ -1,6 +1,6 @@
 package Exercicios;
 
-public class NumberPalidrome {
+public class NumberPalindrome {
 
     public static void main(String[] args) {
         System.out.println("The number is palindrome: " + isPalindrome(-1221));
